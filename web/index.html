@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Revolt Live Voice</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans";
+            max-width: 720px;
+            margin: 32px auto;
+            line-height: 1.5;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+        }
+
+        .row {
+            display: flex;
+            gap: 8px;
+            margin: 12px 0;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        #log {
+            margin-top: 16px;
+            padding: 12px;
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            min-height: 160px;
+            max-height: 50vh;
+            overflow: auto;
+        }
+
+        .you {
+            color: #444;
+        }
+
+        .bot {
+            color: #0b6;
+        }
+
+        .sys {
+            color: #999;
+            font-style: italic;
+        }
+
+        #textSend {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Revolt Motors — Live Voice</h1>
+    <p class="sys">Click <b>Connect</b> first. Then use <b>Talk</b> → <b>End</b>. AI replies in voice. You can also send
+        text.</p>
+
+    <div class="row">
+        <button id="connect">🔌 Connect</button>
+        <button id="talk" disabled>🎤 Talk</button>
+        <button id="end" disabled>🛑 End</button>
+        <button id="interrupt" disabled>⏹️ Interrupt</button>
+    </div>
+
+    <div class="row">
+        <input id="textSend" placeholder="Type a Revolt question (optional)" />
+        <button id="sendText" disabled>Send</button>
+    </div>
+
+    <div id="log"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
